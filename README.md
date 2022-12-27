@@ -1,5 +1,7 @@
 # Docker Cloudflare DDNS
 
+[![build](https://github.com/kdpuvvadi/cf-ddns/actions/workflows/build.yml/badge.svg)](https://github.com/kdpuvvadi/cf-ddns/actions/workflows/build.yml)
+
 DDNS service for cloudflare
 
 ## Creating a Cloudflare API token
