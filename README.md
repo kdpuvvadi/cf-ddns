@@ -23,7 +23,7 @@ docker run -d --name ddns \
   -e TOKEN=token \
   -e DOMAIN=example.com \
   -e CNAME=test \
-  kdpuvvadi/cf-dddns:latest
+  ghcr.io/kdpuvvadi/cf-ddns:latest
 ```
 
 With `docker-compose`
@@ -34,7 +34,7 @@ version: "3"
 services:
   ddns:
     container_name: ddns
-    image: ddns
+    image: ghcr.io/kdpuvvadi/cf-ddns:latest
     environment:
       TOKEN: 'Token Here'
       DOMAIN: 'example.com'
