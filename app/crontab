@@ -1,1 +1,1 @@
-*/1 * * * * /app/ddns.sh >> /dev/stdout
+*/5 * * * * /app/ddns.sh >> /dev/stdout
