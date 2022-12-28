@@ -33,7 +33,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker image(ghcr.io)
-        if: github.ref == 'refs/heads/main'
         uses: docker/build-push-action@v3.2.0
         with:
           context: .
@@ -51,7 +50,6 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       
       - name: Build and push Docker image(docker hub)
-        if: github.ref == 'refs/heads/main'
         uses: docker/build-push-action@v3.2.0
         with:
           context: .
