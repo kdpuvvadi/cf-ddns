@@ -26,11 +26,11 @@ if [[ $tokenStatus == "active" ]]; then {
         fi
     }
     else {
-        echo "Record exists, Checking if needs to be updated."
+        echo "Record exists, Checking if it needs to be updated."
         recordContent=$(cloudflare "$CF_API/zones/$zoneID/dns_records?type=A&name=$record" | jq .result[0].content)
         localIP=$(curl -s ifconfig.me/all.json | jq  .ip_addr)
         if [ "$recordContent" == "$localIP" ]; then {
-            echo "Record for $record is upto date, no need to be update($currentIP)."
+            echo "Record for $record is upto date, no need to update($currentIP)."
         }
         else {
             recordID=$(cloudflare "$CF_API/zones/$zoneID/dns_records?type=A&name=$record" | jq -r '.result[0].id')
