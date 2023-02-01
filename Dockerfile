@@ -1,7 +1,6 @@
-FROM alpine:latest
+FROM ghcr.io/kdpuvvadi/alpine:latest
 LABEL maintainer="KD Puvvadi"
 
-RUN apk add --no-cache jq curl
 WORKDIR  /app
 COPY ./app .
 
