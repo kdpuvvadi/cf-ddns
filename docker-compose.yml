@@ -3,7 +3,7 @@ version: "3"
 services:
   ddns:
     container_name: ddns
-    image: kdpuvvadi/cf-ddns:latest
+    image: ghcr.io/kdpuvvadi/alpine:latest
     environment:
       TOKEN: 'Token Here'
       DOMAIN: 'example.com'
