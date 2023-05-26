@@ -1,4 +1,4 @@
-FROM ghcr.io/kdpuvvadi/alpine:latest
+FROM ghcr.io/kdpuvvadi/alpine:3.18
 LABEL maintainer="KD Puvvadi"
 
 WORKDIR  /app
